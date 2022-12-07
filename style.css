@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #0077ff;
+    --secondry-color: #001253;
+    --linear-gradient: linear-gradient(to bottom, #0077ff, #001253);
+    --box-shadow: rgba(0,0,0,0.1);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 360px;
+    background: white;
+    box-shadow: 0 0 20px var(--box-shadow);
+    overflow: hidden !important;
+}
+
+.container nav {
+    position: fixed;
+    width: 360px;
+    height: 60px;
+    background: var(--linear-gradient);
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 17px;
+    border-radius: 0 0 30px 30px;
+}
+
+.container .search-box {
+    width: 330px;
+    height: 50px;
+    background: white;
+    display: flex;
+    margin: 14px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 3px var(--box-shadow);
+    overflow: hidden;
+    margin-top: 4.8rem;
+}
+
+.container .search-box input {
+    border: none;
+    outline: none;
+    width: 90%;
+    height: 100%;
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+.container .search-box span {
+    width: 15%;
+    height: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.container .content {
+    width: 100%;
+    height: 400px;
+    padding: 10px 18px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container .content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container .content::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, var(--secondry-color), var(--primary-color));
+    border-radius: 15px;
+}
+
+.container .msgBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    position: relative;
+    top: -30px;
+}
+
+.container .msgBox img {
+    width: 80%;
+}
+
+.container .msgBox p {
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    top: -10px;
+    color: #ccc;
+}
+
+.container #msgSearch {
+    display: none;
+}
+
+.container #msgSearch p {
+    top: -6px;
+}
+
+.container .content .tasks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .content .tasks .task {
+    width: 100%;
+    height: 60px;
+    background: white;
+    box-shadow: 0 0 5px var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.container .content .tasks .task > div {
+    display: flex;
+    gap: 8px;
+}
+
+.container .content .tasks .task > div i {
+    cursor: pointer;
+}
+
+.container .content .tasks .task > div .bi-circle {
+    color: #40c540;
+}
+
+.container .content .tasks .task > div .task-name {
+    color: #555;
+    font-weight: 500;
+}
+
+.container .content .tasks .task > div .bi-pencil-square {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.container .content .tasks .task > div .bi-trash3-fill {
+    color: red;
+    cursor: pointer;
+}
+
+.container .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 156px;
+    background: var(--linear-gradient);
+    border-radius: 100px 100px 0 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    position: relative;
+}
+
+.container .nav .add-task {
+    position: absolute;
+    top: -40px;
+    color: red;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom , #93cdfd44, var(--primary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 3.7rem;
+    border: 2px solid white;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+
+.container .nav .add-task i {
+    position: relative;
+    top: 1.5px;
+}
+
+.container .wrapper-add-task {
+    position: fixed;
+    bottom: 41px;
+    width: 360px;
+    height: 320px;
+    background: white;
+    border-radius: 100px 100px 0 0 ;
+    border: 8px solid var(--primary-color);
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    display: none;
+    transition: all 0.4s;
+}
+
+.container .wrapper-add-task .title {
+    padding: 25px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: -18px;
+    position: relative;
+    top: -15px;
+}
+
+.container .wrapper-add-task input {
+    width: 100%;
+    padding: 12px 10px;
+    background: #55555507;
+    border: 1px solid #cccccc34;
+    outline: none;
+    font-size: 18px;
+}
+
+.container .wrapper-add-task input::placeholder {
+    font-size: 19px;
+}
+
+.container .wrapper-add-task > div {
+    padding: 12px 0;
+    font-size: 19px;
+    font-weight: 500;
+    color: #555;
+}
+
+.container .wrapper-add-task > div .colors {
+    display: flex;
+    gap: 8px;
+}
+
+.container .wrapper-add-task > div .colors span {
+    width: 30px;
+    height: 30px;
+    background: var(--clr);
+    border-radius: 50%;
+    margin-top: 10px;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+.container .wrapper-add-task > div .colors span:hover , 
+.container .wrapper-add-task > div .colors span.active {
+    border: 1px solid var(--secondry-color);
+    transform: scale(1);
+}
+
+.container .wrapper-add-task .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .wrapper-add-task .btns button {
+    padding: 12px 2rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container .wrapper-add-task .btns #cancel-btn {
+    background: #eaf1f82a;
+    box-shadow: 0 0 15px var(--box-shadow);
+    color: var(--primary-color);
+}
+
+.container .wrapper-add-task .btns #cancel-btn:hover {
+    background: #c5def79d;
+}
+
+.container .wrapper-add-task .btns #save-btn {
+    background: var(--primary-color);
+    box-shadow: 0 0 12px var(--box-shadow);
+    color: white;
+    box-shadow: inset 3px -3px 0 rgba(0,0,0,0.15);
+}
+
+.container .wrapper-add-task .btns #save-btn:hover {
+    filter: brightness(0.9);
+    box-shadow: inset -3px 3px 0 rgba(0,0,0,0.12);
+}

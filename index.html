@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Som Task</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- cdn Boostrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <!-- navigation top start-->
+        <nav>
+            <h2>Som Task</h2>
+        </nav>
+        <!-- navigation top end -->
+        <!-- search bar start -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search task">
+            <span><i class="bi bi-search"></i></span>
+        </div>
+        <!-- search bar end --
+        <!-- main start -->
+        <main class="content">
+            <!-- massage Box start -->
+            <div class="msgBox">
+                <img src="imgs/msg.jpg" alt="">
+                <p>Add New Task</p>
+            </div>
+            <div class="msgBox" id="msgSearch">
+                <img src="imgs/notFound.jpg" alt="">
+                <p>No results found</p>
+            </div>
+            <!-- massage Box end -->
+            <!-- task start -->
+            <div class="tasks">
+                <!-- <div class="task">
+                    <div>
+                        <i class="bi bi-circle"></i>
+                        <span class="task-name">Shopping</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-trash3-fill"></i>
+                    </div>
+                </div> -->
+            </div>
+            <!-- task end -->
+        </main> 
+        <!-- main end -->
+        <!-- navigation bottom start -->
+        <div class="nav"> 
+            <div class="add-task">
+                <i class="bi bi-plus-circle"></i>
+            </div>
+            <h3>Add New Task</h3>
+        </div>
+        <!-- navigation bottom end -->
+        <!-- wrapper start -->
+        <div class="wrapper-add-task">
+            <span class="title">Add New Task</span>
+            <input type="text" id="taskInput" placeholder="Add Task" >
+            <div>
+                <p>Select Color</p>
+                <div class="colors">
+                    <span data-color="#0077ff" style="--clr:#0077ff;" class="active"></span>
+                    <span data-color="#EA0000" style="--clr:#EA0000;"></span>
+                    <span data-color="#EAC400" style="--clr:#EAC400;"></span>
+                    <span data-color="#E01099" style="--clr:#E01099;"></span>
+                    <span data-color="#640899" style="--clr:#640899;"></span>
+                </div>
+            </div>
+            <div class="btns">
+                <button id="cancel-btn">Cancel</button>
+                <button id="save-btn">Save</button>
+            </div>
+        </div>
+        <!-- wrapper end -->
+    </div>
+    <!-- javascript -->
+    <script src="./main.js"></script>
+</body>
+</html>
